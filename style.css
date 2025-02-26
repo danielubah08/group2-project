@@ -1,0 +1,143 @@
+.background-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: -1;
+}       
+    
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('./images/bg-stars.svg '), url('./images/pattern-hills.svg');
+            background-position: center, bottom center ;
+            background-repeat: no-repeat, no-repeat;
+            background-size: contain, contain;
+            /* filter: invert(100%), invert(100%); */
+            background-color:  hsl(235, 16%, 14%);
+            font-family: "Red Hat Text", serif ;
+        }
+
+        .fun{
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            padding-bottom: 30px;
+            font-family: "Red Hat Text", serif ;
+            color: white;
+            font-weight: 700;
+            letter-spacing: 5px;
+            
+            
+
+        }
+        .container {
+            text-align: center;
+           justify-content: space-around;
+           align-items: flex-start;
+           flex-wrap: wrap; 
+           width: 900px;
+
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding-top: 40px;
+            font-family: "Red Hat Text", serif ;
+        }
+
+        
+        .time-box {
+            background: #333;
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .time-box span {
+            font-size: 5rem;
+            font-weight: bold;
+            color: #ff4c4c;
+            text-align: center;
+        }
+        .DOG{
+            display: flex;
+            justify-content:space-evenly;
+            flex-direction: row;
+            text-align: center;
+            padding: 10px;   
+            color: grey;
+            font-family: "Red Hat Text", serif ;
+            font-weight: bold;
+        }
+
+        .social-icons {
+        margin-top: auto; /* Push it to the bottom */
+        display: flex;
+        gap: 65px;
+        position: absolute; /* Fix to bottom */
+        bottom: 20px; /* Distance from bottom */
+        left: 50%;
+        transform: translateX(-50%);
+        }
+
+    .social-icons i {
+        font-size: 1.5rem;
+        cursor: pointer;
+}
+
+/* 🔹 Responsive Design 🔹 */
+@media (max-width: 768px) {
+    /* Tablet View */
+    .countdown {
+        gap: 10px;
+    }
+    
+    .time-box {
+        width: 80px;
+        height: 80px;
+        font-size: 1.5rem;
+    }
+    
+    .DOG span {
+        font-size: 0.8rem;
+    }
+
+    .social-icons img {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Mobile View */
+    .countdown {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .time-box {
+        width: 70px;
+        height: 70px;
+        font-size: 1.3rem;
+    }
+
+    .DOG {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .DOG span {
+        font-size: 0.75rem;
+    }
+
+    .social-icons img {
+        width: 20px;
+        height: 20px;
+    }
+}
